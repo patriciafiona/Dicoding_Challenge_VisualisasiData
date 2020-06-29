@@ -19,8 +19,8 @@ from home.dash_apps.finished_apps import china_sector
 def home(request):
     try:
         #tarik data dari kaggle
-        #kaggle.api.authenticate()
-        #kaggle.api.dataset_download_files('sudalairajkumar/novel-corona-virus-2019-dataset')
+        kaggle.api.authenticate()
+        kaggle.api.dataset_download_files('sudalairajkumar/novel-corona-virus-2019-dataset')
 
         #ambil berita dari API os.environ['MONGO_API_KEY']
         newsapi = NewsApiClient(api_key = settings.NEWSAPI_API_KEY) 
