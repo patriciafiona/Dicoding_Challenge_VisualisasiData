@@ -1,0 +1,91 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load plotly_dash %}
+{% load humanize %}
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-white">Situasi Terkini | Kasus Terkonfirmasi</h1>
+</div>
+
+<div class="row alas">
+    <div class="col col-md-3">
+        <div class="row div_bg_gray">
+            <h5>10 Besar Negara Bagian Dengan Kasus Terkonfirmasi Tertinggi</h5>
+            <div class="row _10_bigest_tx">
+                {% for i,c,t in confirmed_terbanyak %}
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h4>{{i}}.</h4>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="tx_detail_red">{{t|intcomma }} Terkonfirmasi</p>
+                            <p class="tx_detail_white">{{c}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-8 right_box" style="padding:0px 10px">
+        <div class="row div_bg_gray">
+            {{ brazilMap_confirmed | safe }}
+        </div>
+        <div class="row">
+            <div class="col col-md-7 div_bg_gray" style="margin-right:10px;">
+                <h5>Grafik Batang</h5>
+                {{ peringkat_20_confirmed | safe }}
+            </div>
+            <div class="col col-md-4 div_bg_gray">
+                <h6>Grafik Perkembangan Kasus di Brazil</h6>
+                <div class="row">
+                    <img src="{% static 'img/Brazil_confirmed_graph.png'%}" class="graf_perkembangan_img_sm"/>
+                    <p class="grafik_detail">Grafik Perkembangan Kasus Terkonfirmasi</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/Brazil_newCase_graph.png'%}" class="graf_perkembangan_img_sm"/>
+                    <p class="grafik_detail">Grafik Perkembangan Kasus Baru</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+<div class="row div_bg_gray proporsi_box">
+    <div class="col-md-12">
+        {{ proporsi_confirmed | safe }}
+    </div>
+</div>
+
+<br/>
+
+<div class="row bottom_box_detail">
+    <div class="col div_bg_gray" style="margin-right: 10px">
+        <h3><b>{{ latest_date }}</b></h3>
+        <p class="latest_detail_tx">Pembaharuan Data Terakhir</p>
+    </div>
+    <div class="col-md-8 div_bg_gray">
+        <h5>Total Kasus Covid-19 di Brazil</h5>
+        <div class="row">
+            <div class="col col-md-4">
+                <h6 class="tx_confirmed_total">{{ jumlah_terkini_c }}</h6>
+                <p class="tx_kasus_detail">Kasus Terkonfirmasi</p>
+            </div>
+            <div class="col col-md-4">
+                <h6 class="tx_deaths_total">{{ jumlah_terkini_d }}</h6>
+                <p class="tx_kasus_detail">Kasus Meninggal</p>
+            </div>
+            <div class="col col-md-4">
+                <h6 class="tx_province_total">{{ jumlah_negara_bagian }}</h6>
+                <p class="tx_kasus_detail">Negara Bagian</p>
+            </div>
+        </div>
+        <p class="data_warning_tx"><span>*Data Berdasarkan Dataset Dari Kaggle dengan judul <i>'Novel Corona Virus 2019 Dataset'</i></span></p>
+    </div>
+</div>
+
+{% endblock %}

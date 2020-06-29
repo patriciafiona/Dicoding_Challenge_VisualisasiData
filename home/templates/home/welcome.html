@@ -1,0 +1,30 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load plotly_dash %}
+{% load humanize %}
+
+<div class="row alas">
+    <h3>Si COVID-19 <sup>id</sup></h3>
+
+    <div class="news_container"> 
+        {% for new, des, i, url in mylist %} 
+            <div class="row news_box">
+                <div class="col-md-4">
+                    <img src="{{ i }}" alt="..." class="news_img"> 
+                </div>
+                
+                <div class="col-md-6">
+                    <h3> {{ new }} </h3>
+                    {{ value|linebreaks }} 
+
+                    <p class="news_desc">{{ des }}</p>
+                    {{ value|linebreaks }} 
+                    <a href="{{ url }}">Lihat Selengkapnya...</a>
+                </div>
+            </div>
+        {% endfor %} 
+    </div> 
+</div>
+
+{% endblock %}

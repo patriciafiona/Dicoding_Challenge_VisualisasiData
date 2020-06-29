@@ -1,0 +1,159 @@
+.tx_confirmed_total, .tx_deaths_total, 
+.tx_recover_total, .tx_active_total, 
+.tx_province_total{
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.tx_confirmed_total{
+    color: turquoise !important;
+}
+
+.tx_deaths_total{
+    color: red !important;
+}
+
+.tx_recover_total{
+    color: green !important;
+}
+
+.tx_active_total{
+    color: rgb(255, 230, 0) !important;
+}
+
+.tx_province_total{
+    color: rgb(87, 0, 185) !important;
+}
+
+.data_warning_tx{
+    font-size: 9px;
+    text-align: right;
+    margin: 0;
+}
+
+.data_warning_red_tx{
+    font-size: 9px;
+    text-align: right;
+    margin: 0;
+    color: red;
+}
+
+.tx_kasus_detail{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+.div_bg_gray{
+    background-color: #303030;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.latest_detail_tx{
+    font-size: 10px;
+    color:white;
+}
+
+.bottom_box_detail{
+    margin: 0px 10px;
+}
+
+.bottom_box_sm{
+    padding: 0px 5px;
+}
+
+.alas, .right_box{
+    margin: 0px 10px;
+}
+
+.alas{
+    width: 100%;
+}
+
+.tx_detail_red{
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0px;
+    width:200px;
+}
+
+.tx_detail_white{
+    color: white;
+    font-size: 12px;
+    margin: 0px;
+}
+
+.detail_separator{
+    margin: 5px;
+    border-color: gray;
+}
+
+img.graf_perkembangan_img{
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.graf_perkembangan_img_sm{
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+}
+
+.grafik_detail{
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+}
+
+._10_bigest_graf{
+    width: 90%;
+    padding: 60px 0px;
+}
+
+.proporsi_box{
+    justify-content: center;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+._10_bigest_tx{
+    margin:20px 0px;
+}
+
+.left_b_map{
+    width: 50%;
+    display: inline-block;
+}
+
+.right_b_map{
+    width: 45%;
+    display: inline-block;
+}
+
+/*News Sector*/
+.news_container{
+    padding: 20px;
+    margin: 20px;
+}
+
+.news_img{
+    width: 250px;
+}
+
+.news_box{
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+.news_desc{
+    font-size: 12px;
+}

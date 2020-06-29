@@ -1,0 +1,33 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load plotly_dash %}
+{% load humanize %}
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-white">Situasi Terkini | Perkembangan & Persebaran Pandemi</h1>
+</div>
+
+<div class="row alas">
+    <div class="left_b_map div_bg_gray">
+        {{ world_perkembangan_persebaran | safe }}
+        <br/>
+        <p class="data_warning_tx ">
+            <span>
+                <i>
+                    *For best experience please 
+                    <b class="data_warning_red_tx">Pause</b> 
+                    and <b class="data_warning_red_tx">Rotate</b> 
+                    the Map by dragging the map area.
+                </i>
+            </span>
+        </p>
+    </div>
+    <div class="right_b_map div_bg_gray" style="margin-left:10px;">
+        {{ world_perkembangan_persebaran_02 | safe }}
+        <br/>
+    </div>
+</div>
+
+{% endblock %}

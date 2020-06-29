@@ -1,0 +1,108 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="http://127.0.0.1:8000/">
+    <div class="sidebar-brand-icon rotate-n-16">
+      <i class="fas fa-laugh-wink"></i>
+    </div>
+    <div class="sidebar-brand-text mx-4" style="font-size: 12px;">Si COVID-19 <sup>id</sup></div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my--1">
+
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item active">
+    <a class="nav-link" href="http://127.0.0.1:8000/">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Home</span></a>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    Situasi Terkini
+  </div>
+
+  <!-- Nav Item - WORLD Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWorld" aria-expanded="true" aria-controls="collapseWorld">
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Dunia</span>
+    </a>
+    <div id="collapseWorld" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-gray py-3 collapse-inner rounded">
+        <h5 class="collapse-header">Situasi Terkini: </h5>
+        <a class="collapse-item" href="http://127.0.0.1:8000/world_confirmed/">Kasus Terkonfirmasi</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/world_deaths/">Kasus Meninggal</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/world_recovered/">Kasus Pulih</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/world_active/">Kasus Aktif</a>
+
+        <br/>
+        
+        <h5 class="collapse-header">Perkembangan Pandemi: </h5>
+        <a class="collapse-item" href="http://127.0.0.1:8000/world_perkembangan_persebaran/">Perkembangan COVID-19</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Nav Item - US Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUS" aria-expanded="true" aria-controls="collapseUS">
+      <i class="fas fa-fw fa-wrench"></i>
+      <span>Amerika Serikat</span>
+    </a>
+    <div id="collapseUS" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-gray py-3 collapse-inner rounded">
+        <h5 class="collapse-header">Situasi Terkini: </h5>
+        <a class="collapse-item" href="http://127.0.0.1:8000/us_confirmed/">Kasus Terkonfirmasi</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/us_deaths/">Kasus Meninggal</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Nav Item - BRAZIL Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBrazil" aria-expanded="true" aria-controls="collapseBrazil">
+      <i class="fas fa-fw fa-wrench"></i>
+      <span>Brazil</span>
+    </a>
+    <div id="collapseBrazil" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-gray py-3 collapse-inner rounded">
+        <h5 class="collapse-header">Situasi Terkini: </h5>
+        <a class="collapse-item" href="http://127.0.0.1:8000/brazil_confirmed/">Kasus Terkonfirmasi</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/brazil_deaths/">Kasus Meninggal</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Nav Item - China Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseChina" aria-expanded="true" aria-controls="collapseChina">
+      <i class="fas fa-fw fa-wrench"></i>
+      <span>China</span>
+    </a>
+    <div id="collapseChina" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-gray py-3 collapse-inner rounded">
+        <h5 class="collapse-header">Situasi Terkini: </h5>
+        <a class="collapse-item" href="http://127.0.0.1:8000/china_confirmed/">Kasus Terkonfirmasi</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/china_deaths/">Kasus Meninggal</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/china_recovered/">Kasus Pulih</a>
+        <a class="collapse-item" href="http://127.0.0.1:8000/china_active/">Kasus Aktif</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider d-none d-md-block">
+
+  <!-- Sidebar Toggler (Sidebar) -->
+  <div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border--1" id="sidebarToggle"></button>
+  </div>
+
+</ul>
+<!-- End of Sidebar -->

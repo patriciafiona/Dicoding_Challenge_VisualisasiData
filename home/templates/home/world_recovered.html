@@ -1,0 +1,93 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load plotly_dash %}
+{% load humanize %}
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-white">Situasi Terkini | Kasus Pulih</h1>
+</div>
+
+<div class="row alas">
+    <div class="col col-md-4">
+        <div class="row div_bg_gray">
+            <h5>10 Besar Negara Dengan Kasus Pulih Tertinggi</h5>
+            <div class="row _10_bigest_tx">
+                {% for i,c,t in recovered_terbanyak %}
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h4>{{i}}.</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <img class="img-profile" width="30px" alt="..." src="{% static 'img/flags/'%}{{ c }}.png">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="tx_detail_red">{{t|intcomma }} Pulih</p>
+                            <p class="tx_detail_white">{{c}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row div_bg_gray">
+            <h5>Grafik Perkembangan Dengan Kasus Terkonfirmasi Terbanyak</h5>
+            <img src="{% static 'img/10_bigest_confirmed_graph.png'%}" class="_10_bigest_graf"/>
+        </div>
+    </div>
+
+    <div class="col col-md-7 right_box" style="padding:0px 10px">
+        <div class="row div_bg_gray">
+            {{ worldMap_Recovered | safe }}
+        </div>
+        <div class="row div_bg_gray">
+            {{ peringkat_20_recovered | safe }}
+        </div>
+
+        <div class="row div_bg_gray">
+            <h5>Grafik Perkembangan Kasus di Indonesia</h5>
+            <div class="col-md-6">
+                <img src="{% static 'img/Indonesia_confirmed_graph.png'%}" class="graf_perkembangan_img"/>
+                <p class="grafik_detail">Grafik Perkembangan Kasus Terkonfirmasi</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/Indonesia_newCase_graph.png'%}" class="graf_perkembangan_img"/>
+                <p class="grafik_detail">Grafik Perkembangan Kasus Baru</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+<div class="row bottom_box_detail">
+    <div class="col div_bg_gray" style="margin-right: 10px">
+        <h3><b>{{ latest_date }}</b></h3>
+        <p class="latest_detail_tx">Pembaharuan Data Terakhir</p>
+    </div>
+    <div class="col-md-8 div_bg_gray">
+        <h5>Total Kasus Covid-19 Dunia</h5>
+        <div class="row">
+            <div class="col col-md-3">
+                <h6 class="tx_confirmed_total">{{ jumlah_terkini_c }}</h6>
+                <p class="tx_kasus_detail">Kasus Terkonfirmasi</p>
+            </div>
+            <div class="col col-md-3">
+                <h6 class="tx_deaths_total">{{ jumlah_terkini_d }}</h6>
+                <p class="tx_kasus_detail">Kasus Meninggal</p>
+            </div>
+            <div class="col col-md-3">
+                <h6 class="tx_recover_total">{{ jumlah_terkini_r }}</h6>
+                <p class="tx_kasus_detail">Kasus Pulih</p>
+            </div>
+            <div class="col col-md-3">
+                <h6 class="tx_active_total">{{ jumlah_terkini_a }}</h6>
+                <p class="tx_kasus_detail">Kasus Aktif</p>
+            </div>
+        </div>
+        <p class="data_warning_tx"><span>*Data Berdasarkan Dataset Dari Kaggle dengan judul <i>'Novel Corona Virus 2019 Dataset'</i></span></p>
+    </div>
+</div>
+
+{% endblock %}
